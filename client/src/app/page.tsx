@@ -1,14 +1,12 @@
-import Link from "next/link";
-import  LoginForm  from "./signup/signup";
-import Login from "./Login/login";
-
+"use client"
+import Login from "./login/page";
+import {BrowserRouter,Route,Routes} from "react-router-dom";
 
 export default function Home() {
   return (
-    <div>
-      <LoginForm/>
-      
-    </div>
+    <>
+     <Login/> 
+    </>
    
   );
 }

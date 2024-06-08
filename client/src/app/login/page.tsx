@@ -36,7 +36,7 @@ export default function Login() {
     const data = { email, password };
 
     try {
-      const response = await fetch("/api/handleLogin/", {
+      const response = await fetch("http://localhost:3000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -60,12 +60,11 @@ export default function Login() {
   };
   return (
     <div className="flex min-h-screen items-center justify-center p-20">
-    <Card className="mx-auto max-w-sm px-9 bg-slate-100">
+    <Card className="mx-auto max-w-sm bg-slate-100">
       <CardHeader >
         <CardTitle className="text-2xl text-center ">Login</CardTitle>
         <CardDescription>
           Enter your email below to login to your account
-
         </CardDescription >
       </CardHeader>
       <CardContent >
@@ -104,7 +103,7 @@ export default function Login() {
         
         <div className="mt-4 text-center text-sm">
           Don&apos;t have an account?{" "}
-          <Link href="#" className="underline">
+          <Link href="/signup" className="underline">
             Sign up
           </Link>
         </div>
